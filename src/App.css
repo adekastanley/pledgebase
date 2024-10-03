@@ -1,0 +1,22 @@
+@font-face {
+	font-family: sf-pro-heading;
+	src: url("./assets/fonts/SF-Pro-Display-Medium.otf");
+}
+@font-face {
+	font-family: sf-pro-text;
+	src: url("./assets/fonts/SF-Pro-Text-Medium.otf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+	font-family: sf-pro-heading, poppins, "Times New Roman", Times, serif;
+}
+p,
+a {
+	font-family: sf-pro-text, poppins, "Times New Roman", Times, serif;
+}

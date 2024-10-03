@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
+import Index from "../navigation/Index";
 const BaseLayout = () => {
 	return (
 		<div>
-			BaseLayout
+			<Index />
 			<div>
 				<Outlet />
 			</div>
