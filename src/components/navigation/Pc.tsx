@@ -13,11 +13,19 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import {
+	NavigationMenu,
+	NavigationMenuContent,
+	NavigationMenuItem,
+	NavigationMenuList,
+	NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
 const leftNavLinks = [
-	{
-		title: "Projects",
-		link: "/projects",
-	},
+	// {
+	// 	title: "Projects",
+	// 	link: "/projects",
+	// },
 	{
 		title: "Success stories",
 		link: "/success",
@@ -25,6 +33,33 @@ const leftNavLinks = [
 	{
 		title: "About",
 		link: "/about",
+	},
+];
+const leftProjectsLinks = [
+	{
+		title: "ALl Projects",
+		link: "/projects",
+		text: "find health related projects to support",
+	},
+	{
+		title: "Health",
+		link: "/projects",
+		text: "find health related projects to support",
+	},
+	{
+		title: "Education",
+		link: "/projects",
+		text: "find health related projects to support",
+	},
+	{
+		title: "Community",
+		link: "/projects",
+		text: "find health related projects to support",
+	},
+	{
+		title: "Social",
+		link: "/projects",
+		text: "find health related projects to support",
 	},
 ];
 const Pc = () => {
@@ -51,6 +86,34 @@ const Pc = () => {
 			<ul className="flex  text-white gap-2 py-2  font-semibold  items-center px-16 rounded-[24px] bg-black shadow-lg bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-50 saturate-100 backdrop-contrast-100">
 				<li className=" shadow-lg px-3 py-1 flex items-center rounded-sm justify-center">
 					<Link to={"/"}>Logo</Link>
+				</li>
+
+				<li className="">
+					<Link to={"/projects"}>
+						<NavigationMenu>
+							<NavigationMenuList>
+								<NavigationMenuItem>
+									<NavigationMenuTrigger className="bg-transparent  font-semibold px-3 py-1 flex items-center rounded-sm">
+										Projects
+									</NavigationMenuTrigger>
+									<NavigationMenuContent className="bg-none">
+										<ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+											{leftProjectsLinks.map((item, index) => (
+												<li className="hover:bg-gray-100" key={index}>
+													<Link className="" to={item.link}>
+														<h6>{item.title}</h6>
+														<span className="text-xs font-light">
+															{item.text}
+														</span>
+													</Link>
+												</li>
+											))}
+										</ul>
+									</NavigationMenuContent>
+								</NavigationMenuItem>
+							</NavigationMenuList>
+						</NavigationMenu>
+					</Link>
 				</li>
 				{leftNavLinks.map((item, index) => (
 					<li className="rounded-sm shadow-sm px-3 py-1 " key={index}>
