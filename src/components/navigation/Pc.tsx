@@ -59,7 +59,9 @@ const Pc = () => {
 				))}
 			</ul>
 			<div className="flex relative  items-center gap-2">
-				<Button className="bg-black rounded-[24px]">Connect Wallet</Button>
+				<Button className="bg-black rounded-[24px] hover:text-black hover:outline hover:outline-2 hover:outline-black">
+					Connect Wallet
+				</Button>
 				<div className=" ">
 					<DropdownMenu>
 						<DropdownMenuTrigger className="">
