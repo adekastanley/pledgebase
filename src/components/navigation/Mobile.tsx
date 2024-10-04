@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
+import { Button } from "../ui/button";
 
 // Define the type for each menu item
 type MenuLink = {
@@ -97,12 +98,15 @@ const Mobile: React.FC = () => {
 	}, [isMenuOpen]);
 
 	return (
-		<header ref={container} className="fixed w-full z-10 bg-red-900">
-			<div className="w-full flex items-center justify-between py-4 px-6  fixed z-[20] ">
+		<header ref={container} className="fixed w-full z-10 ">
+			<div className="w-full flex items-center justify-between py-4 px-6  fixed z-[20]  ">
 				<div className="text-black font-bold text-lg">LOGO</div>
-				<button onClick={toggleNav} className="text-black">
-					{isMenuOpen ? <FaTimes size={32} /> : <FaBars size={32} />}
-				</button>
+				<div className="flex items-center gap-2">
+					<Button size={"sm"}>Login</Button>
+					<button onClick={toggleNav} className="text-black">
+						{isMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+					</button>
+				</div>
 			</div>
 			<div
 				ref={overlayRef}
@@ -120,6 +124,12 @@ const Mobile: React.FC = () => {
 					))}
 				</ul>
 			</div>
+
+			<ul className="fixed bottom-0 w-full flex  px-2 items-center justify-between h-[3rem] text-white bg-black">
+				<li>Projects</li>
+				<li> Stories</li>
+				<li>Account</li>
+			</ul>
 		</header>
 	);
 };

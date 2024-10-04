@@ -1,29 +1,91 @@
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/components/ui/carousel";
+import { type CarouselApi } from "@/components/ui/carousel";
+import {
+	Card,
+	CardContent,
+	// CardDescription,
+	// CardFooter,
+	// CardHeader,
+	// CardTitle,
+} from "@/components/ui/card";
+
+import React from "react";
 const projectList = [
 	{
 		link: "",
-		title: "Education",
+
+		cardText:
+			"Find you next community project build a better tomorrow today, on base",
+		cardCategory: "All Projects",
 	},
 	{
 		link: "",
-		title: "Health",
+
+		cardText:
+			"Find you next community project build a better tomorrow today, on base",
+		cardCategory: "Health Porjects",
 	},
 	{
 		link: "",
-		title: "housing",
+
+		cardText:
+			"Find you next community project build a better tomorrow today, on base",
+		cardCategory: "Education Projects",
 	},
 ];
 const DisplayProjectCategoryBar = () => {
+	const [api, setApi] = React.useState<CarouselApi>();
+	const [current, setCurrent] = React.useState(0);
+	const [count, setCount] = React.useState(0);
+
+	React.useEffect(() => {
+		if (!api) {
+			return;
+		}
+
+		setCount(api.scrollSnapList().length);
+		setCurrent(api.selectedScrollSnap() + 1);
+
+		api.on("select", () => {
+			setCurrent(api.selectedScrollSnap() + 1);
+		});
+	}, [api]);
+
 	return (
-		<ul className="bg-red-900 flex gap-3 px-10 py-3 min-h-10 items-center overflow-auto ">
-			{projectList.map((project, index) => (
-				<li
-					key={index}
-					className="bg-green-900 px-10 py-1 sm:py-3 rounded-[24px] text-sm sm:text-base uppercase"
-				>
-					{project.title}
-				</li>
-			))}
-		</ul>
+		<div className=" mx-2 lg:mx-[20rem] max-w-full">
+			<Carousel setApi={setApi} className="w-full ">
+				<CarouselContent>
+					{projectList.map((item, index) => (
+						<CarouselItem key={index}>
+							<Card>
+								<CardContent className="flex items-center flex-col-reverse sm:flex-row  p-6 h-full">
+									{/* <span className="text-4xl font-semibold">{index + 1}</span> */}
+									<div className="w-full flex flex-col gap-4  h-full">
+										<div>top div</div>
+										<p className="text-light">{item.cardText}</p>
+										<p className="font-semibold">{item.cardCategory}</p>
+									</div>
+									<div className="w-full h-full bg-red-900">
+										image container
+									</div>
+								</CardContent>
+							</Card>
+						</CarouselItem>
+					))}
+				</CarouselContent>
+				<CarouselPrevious />
+				<CarouselNext />
+			</Carousel>
+			<div className="py-2 text-center text-sm text-muted-foreground">
+				Slide {current} of {count}
+			</div>
+		</div>
 	);
 };
 
