@@ -7,7 +7,6 @@ import {
 import { Address, Avatar, Name, Identity } from "@coinbase/onchainkit/identity";
 import { color } from "@coinbase/onchainkit/theme";
 
-import { CardContent } from "../ui/card";
 export function WalletComponents() {
 	return (
 		<div className="flex justify-end ">
