@@ -7,6 +7,7 @@ const LandingPage = () => {
 			<section>
 				<Hero />
 			</section>
+			<section></section>
 			<section>
 				<Projects />
 			</section>

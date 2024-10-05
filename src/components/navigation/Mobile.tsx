@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
 import { Button } from "../ui/button";
+import { WalletComponents } from "../user/WalletComponent";
 
 // Define the type for each menu item
 type MenuLink = {
@@ -102,7 +103,9 @@ const Mobile: React.FC = () => {
 			<div className="w-full flex items-center justify-between py-4 px-6  fixed z-[20]  ">
 				<div className="text-black font-bold text-lg">LOGO</div>
 				<div className="flex items-center gap-2">
-					<Button size={"sm"}>Login</Button>
+					<Button size={"sm"}>
+						<WalletComponents />
+					</Button>
 					<button onClick={toggleNav} className="text-black">
 						{isMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
 					</button>
