@@ -6,7 +6,10 @@ const Projects = () => {
 			<div>
 				<DisplayProjectCategoryBar />
 			</div>
-			<DisplayLatestProjects />
+			<div className="mt-[5rem]">
+				<h2 className="text-xl">Latest Projects</h2>
+				<DisplayLatestProjects />
+			</div>
 		</div>
 	);
 };

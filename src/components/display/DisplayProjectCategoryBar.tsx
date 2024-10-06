@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/card";
 
 import React from "react";
+import schoolsImages from "@/assets/images";
 const projectList = [
 	{
 		link: "",
@@ -75,8 +76,8 @@ const DisplayProjectCategoryBar = () => {
 										<p className="text-light">{item.cardText}</p>
 										<p className="font-semibold">{item.cardCategory}</p>
 									</div>
-									<div className="w-full h-full bg-red-900 ">
-										image container
+									<div className="w-full h-full rounded-xl ">
+										<img className="rounded-xl" src={schoolsImages[1]} alt="" />
 									</div>
 								</CardContent>
 							</Card>

@@ -7,8 +7,8 @@ const LandingPage = () => {
 			<section>
 				<Hero />
 			</section>
-			<section></section>
-			<section>
+
+			<section className="lg:mx-[10rem]  ">
 				<Projects />
 			</section>
 		</main>

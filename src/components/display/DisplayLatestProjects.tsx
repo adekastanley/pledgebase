@@ -1,18 +1,11 @@
-import { Progress } from "@/components/ui/progress";
+import SingleProject from "../SingleProject";
 
 const DisplayLatestProjects = () => {
 	return (
-		<div className=" bg-red-900 sm:grid grid-cols-3 lg:mx-20">
-			<div className=" col-span-1">
-				<div></div>
-				<div>
-					<h3>Title Of Project</h3>
-					<div>
-						<Progress value={70} />
-					</div>
-					<h4>Goal 70% Reached</h4>
-				</div>
-			</div>
+		<div className=" bg-red-900  flex flex-col items-center justify-center  sm:grid sm:grid-cols-3 lg:grid-cols-4">
+			{[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
+				return <SingleProject key={item} />;
+			})}
 		</div>
 	);
 };
