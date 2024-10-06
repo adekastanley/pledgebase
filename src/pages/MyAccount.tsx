@@ -12,13 +12,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { FundButton } from "@coinbase/onchainkit/fund";
-import {
-	Avatar,
-	Identity,
-	Name,
-	Badge,
-	Address,
-} from "@coinbase/onchainkit/identity";
+import { Identity, Name, Badge } from "@coinbase/onchainkit/identity";
 
 import { useAccount } from "wagmi";
 const MyAccount = () => {

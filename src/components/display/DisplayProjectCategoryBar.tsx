@@ -70,9 +70,8 @@ const DisplayProjectCategoryBar = () => {
 						<CarouselItem key={index}>
 							<Card>
 								<CardContent className="flex items-center flex-col-reverse sm:flex-row  p-6 h-full">
-									{/* <span className="text-4xl font-semibold">{index + 1}</span> */}
 									<div className="w-full flex flex-col gap-4  h-full">
-										<div>top div</div>
+										{/* <div>top div</div> */}
 										<p className="text-light">{item.cardText}</p>
 										<p className="font-semibold">{item.cardCategory}</p>
 									</div>
