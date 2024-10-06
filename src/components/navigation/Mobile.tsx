@@ -15,7 +15,7 @@ import {
 import { Address, Avatar, Name, Identity } from "@coinbase/onchainkit/identity";
 import { color } from "@coinbase/onchainkit/theme";
 
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+// import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 // Define the type for each menu item
 type MenuLink = {
@@ -116,17 +116,17 @@ const Mobile: React.FC = () => {
 			<div className="!container  w-full flex items-center justify-between py-4 px-6   z-[20]  ">
 				<div className="text-black font-bold text-lg">LOGO</div>
 				<div className="flex items-center gap-2">
-					{/* <Button size={"sm"}>
+					<Button className="w-24 text-xs">
 						<WalletComponents />
-					</Button> */}
-					<Dialog open={open} onOpenChange={setOpen}>
+					</Button>
+					{/* <Dialog open={open} onOpenChange={setOpen}>
 						<DialogTrigger asChild>
 							<Button variant="outline"> Wallet</Button>
 						</DialogTrigger>
 						<DialogContent className="w-auto">
 							<WalletComponents />
 						</DialogContent>
-					</Dialog>
+					</Dialog> */}
 					<button onClick={toggleNav} className="text-black">
 						{isMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
 					</button>
