@@ -6,6 +6,7 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import { type CarouselApi } from "@/components/ui/carousel";
+import { useMediaQuery } from "react-responsive";
 import {
 	Card,
 	CardContent,
@@ -57,9 +58,12 @@ const DisplayProjectCategoryBar = () => {
 		});
 	}, [api]);
 
+	const isHandheld = useMediaQuery({
+		query: "(max-width: 800px)",
+	});
 	return (
-		<div className=" mx-2 lg:mx-[20rem] max-w-full">
-			<Carousel setApi={setApi} className="w-full ">
+		<div className="  px-2 w-full flex justify-between flex-col items-center">
+			<Carousel setApi={setApi} className=" w-[95%] sm:w-[80%] ">
 				<CarouselContent>
 					{projectList.map((item, index) => (
 						<CarouselItem key={index}>
@@ -71,7 +75,7 @@ const DisplayProjectCategoryBar = () => {
 										<p className="text-light">{item.cardText}</p>
 										<p className="font-semibold">{item.cardCategory}</p>
 									</div>
-									<div className="w-full h-full bg-red-900">
+									<div className="w-full h-full bg-red-900 ">
 										image container
 									</div>
 								</CardContent>
@@ -79,8 +83,12 @@ const DisplayProjectCategoryBar = () => {
 						</CarouselItem>
 					))}
 				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
+				{!isHandheld && (
+					<>
+						<CarouselPrevious />
+						<CarouselNext />
+					</>
+				)}
 			</Carousel>
 			<div className="py-2 text-center text-sm text-muted-foreground">
 				Slide {current} of {count}

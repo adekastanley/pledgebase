@@ -28,8 +28,8 @@ const leftNavLinks = [
 	// 	link: "/projects",
 	// },
 	{
-		title: "Success stories",
-		link: "/success",
+		title: "My Account",
+		link: "/account",
 	},
 	{
 		title: "About",
@@ -132,8 +132,9 @@ const Pc = () => {
 							<FaBars size={32} className="outline-0 border-none" />
 						</DropdownMenuTrigger>
 						<DropdownMenuContent className="">
-							<DropdownMenuLabel>My Account</DropdownMenuLabel>
+							<DropdownMenuLabel>Quick Links</DropdownMenuLabel>
 							<DropdownMenuSeparator />
+							<DropdownMenuItem>Success Stories</DropdownMenuItem>
 							<DropdownMenuItem>How It Works</DropdownMenuItem>
 							<DropdownMenuItem>Contact</DropdownMenuItem>
 							<DropdownMenuItem>Blog</DropdownMenuItem>
