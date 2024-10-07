@@ -54,7 +54,7 @@ const menuLinks: MenuLink[] = [
 ];
 
 const Mobile: React.FC = () => {
-	const [open, setOpen] = React.useState(false);
+	// const [open, setOpen] = React.useState(false);
 
 	const container = useRef<HTMLElement | null>(null);
 	const overlayRef = useRef<HTMLDivElement | null>(null);
