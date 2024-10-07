@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
 import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 // import { WalletComponents } from "../user/WalletComponent";
 
 // wallet
@@ -149,11 +150,11 @@ const Mobile: React.FC = () => {
 				</ul>
 			</div>
 
-			{/* <ul className="fixed bottom-0 w-full flex  px-2 items-center justify-between h-[3rem] text-white bg-black">
+			<ul className="fixed bottom-0 w-full flex  px-2 items-center justify-between h-[3rem] text-white bg-black">
 				<li>Projects</li>
 				<li> Stories</li>
-				<li>Account</li>
-			</ul> */}
+				<Link to={"/account"}>Account</Link>
+			</ul>
 		</header>
 	);
 };

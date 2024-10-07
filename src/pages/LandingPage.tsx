@@ -1,17 +1,27 @@
 import Hero from "@/components/screens/Hero";
 import Projects from "@/components/screens/Projects";
+import DisplayLoader from "@/components/display/DisplayLoader";
+import { useState } from "react";
 
 const LandingPage = () => {
-	return (
-		<main>
-			<section>
-				<Hero />
-			</section>
+	const [isLoaded, setIsLoaded] = useState(false);
 
-			<section className="lg:mx-[5rem]  ">
-				<Projects />
-			</section>
-		</main>
+	return (
+		<>
+			{!isLoaded && <DisplayLoader setIsLoaded={setIsLoaded} />}
+			{isLoaded && (
+				<main>
+					<section className="">
+						<Hero />
+					</section>
+
+					<section className="lg:mx-[5rem] mt-[5rem] ">
+						<Projects />
+					</section>
+				</main>
+			)}
+		</>
 	);
 };
+
 export default LandingPage;
