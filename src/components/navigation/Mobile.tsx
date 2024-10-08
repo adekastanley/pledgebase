@@ -114,7 +114,7 @@ const Mobile: React.FC = () => {
 
 	return (
 		<header ref={container} className="fixed  w-full z-10   ">
-			<div className="!container  w-full flex items-center justify-between py-4 px-6   z-[20]  ">
+			<div className="!container  w-full flex items-center justify-between py-4 px-6 fixed z-20 ">
 				<div className="text-black font-bold text-lg">LOGO</div>
 				<div className="flex items-center gap-2">
 					<Button className="w-24 text-xs">
@@ -151,7 +151,7 @@ const Mobile: React.FC = () => {
 			</div>
 
 			<ul className="fixed bottom-0 w-full flex  px-2 items-center justify-between h-[3rem] text-white bg-black">
-				<li>Projects</li>
+				<Link to={"/projects"}>Projects</Link>
 				<li> Stories</li>
 				<Link to={"/account"}>Account</Link>
 			</ul>

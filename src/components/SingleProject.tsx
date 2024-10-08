@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SingleProject = () => {
 	return (
-		<div className="  col-span-1 flex justify-center py-2 px-2 ">
+		<div className=" col-span-1 flex justify-center py-2 px-2 ">
 			<Link to={"/"}>
 				<div className="flex flex-col  rounded-xl ">
 					<div>

@@ -2,7 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import LandingPage from "@/pages/LandingPage";
 import MyAccount from "@/pages/MyAccount";
 
+import Projects from "@/pages/Projects";
+
 import BaseLayout from "@/components/layout/BaseLayout";
+
+import DisplaySingleProject from "@/components/display/DisplaySingleProject";
 
 const routes = createBrowserRouter([
 	{
@@ -22,6 +26,26 @@ const routes = createBrowserRouter([
 			{
 				path: "/account",
 				element: <MyAccount />,
+			},
+		],
+	},
+	{
+		path: "/",
+		element: <BaseLayout />,
+		children: [
+			{
+				path: "/projects",
+				element: <Projects />,
+			},
+		],
+	},
+	{
+		path: "/",
+		element: <BaseLayout />,
+		children: [
+			{
+				path: "/projects/project/:id",
+				element: <DisplaySingleProject />,
 			},
 		],
 	},
