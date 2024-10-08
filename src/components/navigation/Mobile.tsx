@@ -151,9 +151,15 @@ const Mobile: React.FC = () => {
 			</div>
 
 			<ul className="fixed bottom-0 w-full flex  px-2 items-center justify-between h-[3rem] text-white bg-black">
-				<Link to={"/projects"}>Projects</Link>
+				<li>
+					{" "}
+					<Link to={"/projects"}>Projects</Link>
+				</li>
 				<li> Stories</li>
-				<Link to={"/account"}>Account</Link>
+				<li>
+					{" "}
+					<Link to={"/account"}>Account</Link>
+				</li>
 			</ul>
 		</header>
 	);
