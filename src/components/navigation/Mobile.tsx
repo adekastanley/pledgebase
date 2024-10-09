@@ -113,21 +113,16 @@ const Mobile: React.FC = () => {
 	}, [isMenuOpen]);
 
 	return (
-		<header ref={container} className="fixed  w-full z-10   ">
-			<div className="!container  w-full flex items-center justify-between py-4 px-6 fixed z-20 ">
-				<div className="text-black font-bold text-lg">LOGO</div>
+		<header ref={container} className="fixed  w-full z-10  bg-white ">
+			<div className="!container  w-full flex items-center justify-between py-4 px-6 fixed z-20 bg-white">
+				<div className="text-black font-bold text-lg">
+					<Link to={"/"}>LOGO</Link>
+				</div>
 				<div className="flex items-center gap-2">
 					<Button className="w-24 text-xs">
 						<WalletComponents />
 					</Button>
-					{/* <Dialog open={open} onOpenChange={setOpen}>
-						<DialogTrigger asChild>
-							<Button variant="outline"> Wallet</Button>
-						</DialogTrigger>
-						<DialogContent className="w-auto">
-							<WalletComponents />
-						</DialogContent>
-					</Dialog> */}
+
 					<button onClick={toggleNav} className="text-black">
 						{isMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
 					</button>
@@ -157,7 +152,6 @@ const Mobile: React.FC = () => {
 				</li>
 				<li> Stories</li>
 				<li>
-					{" "}
 					<Link to={"/account"}>Account</Link>
 				</li>
 			</ul>
@@ -169,8 +163,8 @@ export default Mobile;
 
 export function WalletComponents() {
 	return (
-		<div className="flex justify-end ">
-			<Wallet className="">
+		<div className="flex justify-end  ">
+			<Wallet className="text-xs ">
 				<ConnectWallet>
 					<Avatar className="h-6 w-6" />
 					<Name />

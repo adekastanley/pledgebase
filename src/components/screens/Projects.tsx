@@ -2,7 +2,7 @@ import DisplayProjectCategoryBar from "../display/DisplayProjectCategoryBar";
 import DisplayLatestProjects from "../display/DisplayLatestProjects";
 const Projects = () => {
 	return (
-		<div className="min-h-[100dvh] mt-[5rem] ">
+		<div className="min-h-[100dvh] mt-[5rem]  ">
 			<div>
 				<DisplayProjectCategoryBar />
 			</div>

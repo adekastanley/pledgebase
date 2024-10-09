@@ -27,7 +27,7 @@ const DisplayProjectCard: React.FC<ProjectProps> = ({
 							alt=""
 						/>
 					</div>
-					<div className="text-black bg-red-900  rounded-b-xl w-full  flex flex-col gap-2 py-2 px-2">
+					<div className="text-black bg-white rounded-b-xl w-full  flex flex-col gap-2 py-2 px-2">
 						<h3 className="w-full ">{projectTitle}</h3>
 						<div className="bg-gray-300 rounded">
 							<Progress value={Number(projectGoalReached)} />

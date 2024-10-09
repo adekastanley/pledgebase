@@ -10,7 +10,7 @@ const LandingPage = () => {
 		<>
 			{!isLoaded && <DisplayLoader setIsLoaded={setIsLoaded} />}
 			{isLoaded && (
-				<main>
+				<main className="bg-gray-100">
 					<section className="">
 						<Hero />
 					</section>

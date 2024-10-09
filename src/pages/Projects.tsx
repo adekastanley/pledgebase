@@ -11,9 +11,9 @@ import DisplayProjects from "@/components/display/DisplayProjects";
 
 const Projects = () => {
 	return (
-		<main className="min-h-screen bg-red-900 w-full pt-20 ">
+		<main className="min-h-screen w-full pt-20 lg:px-20 bg-gray-200">
 			<section className="w-full ">
-				<div className="flex w-full justify-end gap-1 sm:gap-2 px-2 ">
+				<div className="flex w-full justify-end gap-1 sm:gap-2 px-2  ">
 					<div className="w-full sm:w-[30%]">
 						<Input placeholder="search" />
 					</div>
