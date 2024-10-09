@@ -114,7 +114,7 @@ const Mobile: React.FC = () => {
 
 	return (
 		<header ref={container} className="fixed  w-full z-10  bg-white ">
-			<div className="!container  w-full flex items-center justify-between py-4 px-6 fixed z-20 bg-white">
+			<div className="  w-full flex items-center justify-between py-4 px-6 fixed z-20  bg-white">
 				<div className="text-black font-bold text-lg">
 					<Link to={"/"}>LOGO</Link>
 				</div>

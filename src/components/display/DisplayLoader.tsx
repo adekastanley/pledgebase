@@ -25,6 +25,7 @@ const DisplayLoader = (props) => {
 				opacity: 0,
 				x: 100,
 				stagger: 0.2,
+				ease: "power1.inOut",
 				delay: 1,
 				onComplete: () => {
 					props.setIsLoaded(true);

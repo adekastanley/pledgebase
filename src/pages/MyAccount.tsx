@@ -7,8 +7,8 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+// import { Input } from "@/components/ui/input";
+// import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { FundButton } from "@coinbase/onchainkit/fund";
@@ -26,21 +26,24 @@ const MyAccount = () => {
 						<TabsTrigger value="account">Fund account</TabsTrigger>
 						<TabsTrigger value="password">Make withdrawal</TabsTrigger>
 					</TabsList>
-					<div>
-						<Identity
-							address={address || "0x0000000000000000000000000000000000000000"}
-							schemaId="0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9"
-							className="w-[3rem]"
-						>
-							<Name>
-								<Badge />
-							</Name>
-						</Identity>
-					</div>
+
 					<TabsContent value="account">
 						<Card>
 							<CardHeader>
 								<CardTitle>Fund</CardTitle>
+								<div>
+									<Identity
+										address={
+											address || "0x0000000000000000000000000000000000000000"
+										}
+										schemaId="0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9"
+										className="w-[3rem] "
+									>
+										<Name>
+											<Badge className="bg-red-900" />
+										</Name>
+									</Identity>
+								</div>
 								<CardDescription>
 									Click the fund button to either buy or send eth to you account{" "}
 									<br />
@@ -58,24 +61,17 @@ const MyAccount = () => {
 					<TabsContent value="password">
 						<Card>
 							<CardHeader>
-								<CardTitle>Password</CardTitle>
+								<CardTitle>Withdraw</CardTitle>
 								<CardDescription>
-									Change your password here. After saving, you'll be logged out.
+									this section is where you withdraw funds
 								</CardDescription>
 							</CardHeader>
 							<CardContent className="space-y-2">
-								<div className="space-y-1">
-									<Label htmlFor="current">Current password</Label>
-									<Input id="current" type="password" />
-								</div>
-								<div className="space-y-1">
-									<Label htmlFor="new">New password</Label>
-									<Input id="new" type="password" />
-								</div>
+								<p>Page for withdrawing funds</p>
 							</CardContent>
-							{/* <CardFooter>
-								<Button>Save password</Button>
-							</CardFooter> */}
+							<CardFooter>
+								<Button className="w-full">Withdraw</Button>
+							</CardFooter>
 						</Card>
 					</TabsContent>
 				</Tabs>

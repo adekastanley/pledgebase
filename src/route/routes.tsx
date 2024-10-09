@@ -8,6 +8,8 @@ import BaseLayout from "@/components/layout/BaseLayout";
 
 import DisplaySingleProject from "@/components/display/DisplaySingleProject";
 
+import About from "@/pages/About";
+
 const routes = createBrowserRouter([
 	{
 		path: "/",
@@ -36,6 +38,16 @@ const routes = createBrowserRouter([
 			{
 				path: "/projects",
 				element: <Projects />,
+			},
+		],
+	},
+	{
+		path: "/",
+		element: <BaseLayout />,
+		children: [
+			{
+				path: "/about",
+				element: <About />,
 			},
 		],
 	},

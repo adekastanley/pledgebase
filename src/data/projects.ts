@@ -1,7 +1,8 @@
+import images from "./images";
 const projectsData = [
 	{
 		id: 1,
-		projectImage: "https://via.placeholder.com/150",
+		projectImage: images.water1,
 		projectCategory: "Health",
 		projectGoalReached: "30",
 		projectTitle: "Clean Water Initiative in Rural Areas",
