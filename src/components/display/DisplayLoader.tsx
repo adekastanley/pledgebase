@@ -2,7 +2,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { girls } from "@/assets/images";
+
 //@ts-ignore
 const DisplayLoader = (props) => {
 	gsap.registerPlugin(useGSAP);
