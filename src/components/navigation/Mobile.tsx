@@ -6,6 +6,8 @@ import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 // import { WalletComponents } from "../user/WalletComponent";
 
+import { images } from "@/assets/images";
+
 // wallet
 import {
 	ConnectWallet,
@@ -119,7 +121,9 @@ const Mobile: React.FC = () => {
 		>
 			<div className="  w-full flex items-center bg-primary justify-between py-4 px-6 fixed z-20  bg-white">
 				<div className="text-black font-bold text-lg">
-					<Link to={"/"}>LOGO</Link>
+					<Link to={"/"}>
+						<img className="w-[6rem] sm:w-[8rem]" src={images.logo} alt="" />
+					</Link>
 				</div>
 				<div className="flex items-center gap-2">
 					<Button className="w-24 text-xs">
@@ -148,7 +152,7 @@ const Mobile: React.FC = () => {
 				</ul>
 			</div>
 
-			<ul className="fixed bottom-0 w-full flex  px-2 items-center justify-between h-[3rem] text-white bg-black">
+			<ul className="fixed bottom-0 w-full flex  px-2 sm:px-[4rem] items-center justify-between h-[3rem] text-white bg-primary">
 				<li>
 					{" "}
 					<Link to={"/projects"}>Projects</Link>
@@ -173,7 +177,7 @@ export function WalletComponents() {
 					<Name />
 				</ConnectWallet>
 				<WalletDropdown className="bg-black">
-					<Identity className="px-4 pt-3 pb-2 " hasCopyAddressOnClick>
+					<Identity className="px-4 pt-3 pb-2  text-sm" hasCopyAddressOnClick>
 						<Avatar className="shadow-sm mx-1 border-2 border-primary " />
 						<Name className=" my-1" />
 						<Address className={""} />

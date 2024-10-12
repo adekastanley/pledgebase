@@ -17,11 +17,7 @@ const SingleProject = () => {
 					<div className="text-black bg-white rounded-b-xl flex flex-col gap-2 py-2 px-2">
 						<h3>Title Of Project</h3>
 						<div className="bg-gray-300 rounded">
-							<Progress
-								color="text-red-900"
-								value={70}
-								className="bg-blue-300 text-red-900"
-							/>
+							<Progress color="text-red-900" value={70} className="" />
 						</div>
 						<h4>Goal 70% Reached</h4>
 					</div>

@@ -7,7 +7,7 @@ const Projects = () => {
 				<DisplayProjectCategoryBar />
 			</div>
 			<div className=" mt-10 sm:mt-[5rem]">
-				<h2 className="text-xl">Latest Projects</h2>
+				<h2 className="text-xl font-bold my-2">Latest Projects</h2>
 				<DisplayLatestProjects />
 			</div>
 		</div>
