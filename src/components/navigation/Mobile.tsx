@@ -113,8 +113,11 @@ const Mobile: React.FC = () => {
 	}, [isMenuOpen]);
 
 	return (
-		<header ref={container} className="fixed  w-full z-10  bg-white ">
-			<div className="  w-full flex items-center justify-between py-4 px-6 fixed z-20  bg-white">
+		<header
+			ref={container}
+			className="fixed  w-full z-10  bg-gradient-to-r from-blue-900 to-purple-50 "
+		>
+			<div className="  w-full flex items-center bg-primary justify-between py-4 px-6 fixed z-20  bg-white">
 				<div className="text-black font-bold text-lg">
 					<Link to={"/"}>LOGO</Link>
 				</div>
@@ -130,7 +133,7 @@ const Mobile: React.FC = () => {
 			</div>
 			<div
 				ref={overlayRef}
-				className="menu-overlay fixed top-0 left-0 w-full h-full bg-yellow-400 z-10 overflow-hidden"
+				className="menu-overlay fixed top-0 left-0 w-full h-full  z-10 overflow-hidden"
 			>
 				<ul className="h-full flex flex-col items-center justify-center gap-8">
 					{menuLinks.map((item, index) => (
@@ -176,7 +179,7 @@ export function WalletComponents() {
 						<Address className={""} />
 						<Address className={color.foregroundMuted} />
 					</Identity>
-					<WalletDropdownDisconnect className="bg-red-500 text-white  text-center w-full pl-10 pb-2 rounded  " />
+					<WalletDropdownDisconnect className=" text-white  text-center w-full pl-10 pb-2 rounded  " />
 				</WalletDropdown>
 			</Wallet>
 		</div>
