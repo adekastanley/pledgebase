@@ -2,6 +2,8 @@ import { Button } from "../ui/button";
 import { FaBars } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
+import { images } from "@/assets/images";
+
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 import {
@@ -86,7 +88,9 @@ const Pc = () => {
 		>
 			<ul className="flex  text-white gap-2 py-2  font-semibold  items-center px-16 rounded-[24px] bg-black shadow-lg bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-50 saturate-100 backdrop-contrast-100">
 				<li className=" shadow-lg px-3 py-1 flex items-center rounded-sm justify-center">
-					<Link to={"/"}>Logo</Link>
+					<Link to={"/"}>
+						<img className="w-20" src={images.logo} alt="" />
+					</Link>
 				</li>
 
 				<li className="">
